@@ -32,10 +32,10 @@ async def set_chat_title(_, message):
         user_id = message.from_user.id
         permissions = await member_permissions(chat_id, user_id)
         if "can_change_info" not in permissions:
-            await message.reply_text("You Don't Have Enough Permissions.")
+            await message.reply_text("Yeterli İznin yok.")
             return
         if len(message.command) < 2:
-            await message.reply_text("**Usage:**\n/set_chat_title NEW NAME")
+            await message.reply_text("**Kullanım:**\n/set_chat_title Yenİ AD")
             return
         old_title = message.chat.title
         new_title = message.text.split(None, 1)[1]
@@ -56,17 +56,17 @@ async def set_user_title(_, message):
         from_user = message.reply_to_message.from_user
         permissions = await member_permissions(chat_id, user_id)
         if "can_change_info" not in permissions:
-            await message.reply_text("You Don't Have Enough Permissions.")
+            await message.reply_text("Yeterli İznin yok.")
             return
         if len(message.command) < 2:
             await message.reply_text(
-                "**Usage:**\n/set_user_title NEW ADMINISTRATOR TITLE"
+                "**Kullanım:**\n/set_user_title YENI YÖNETICI BAŞLıĞı"
             )
             return
         title = message.text.split(None, 1)[1]
         await app.set_administrator_title(chat_id, from_user.id, title)
         await message.reply_text(
-            f"Successfully Changed {from_user.mention}'s Admin Title To {title}"
+            f"Başarıyla Değiştirildi {from_user.mention}'s Yönetici Başlığı {title}"
         )
     except Exception as e:
         print(e)
@@ -81,17 +81,17 @@ async def set_chat_photo(_, message):
 
         permissions = await member_permissions(chat_id, user_id)
         if "can_change_info" not in permissions:
-            await message.reply_text("You Don't Have Enough Permissions.")
+            await message.reply_text("Yeterli İznin yok.")
             return
         if not message.reply_to_message:
-            await message.reply_text("Reply to a photo to set it as chat_photo")
+            await message.reply_text("Fotoğrafı olarak ayarlamak için yanıtlama chat_photo")
             return
         if not message.reply_to_message.photo and not message.reply_to_message.document:
-            await message.reply_text("Reply to a photo to set it as chat_photo")
+            await message.reply_text("Fotoğrafı olarak ayarlamak için yanıtlama chat_photo")
             return
         photo = await message.reply_to_message.download()
         await message.chat.set_photo(photo)
-        await message.reply_text("Successfully Changed Group Photo")
+        await message.reply_text("Grup Fotoğrafı Başarıyla Değiştirildi")
         os.remove(photo)
     except Exception as e:
         print(e)
@@ -101,43 +101,44 @@ async def set_chat_photo(_, message):
 __mod_name__ = "Admin"
 
 __help__ = """
-Make it easy to promote and demote users with the admin module!
+Yönetici modülü ile kullanıcıları tanıtmayı ve indirgemeyi kolaylaştırın!
 
-<b>Available commands:</b>
-- /promote (user) (?admin's title): Promotes the user to admin.
-- /demote (user): Demotes the user from admin.
-- /adminlist: Shows all admins of the chat.
-- /admincache: Update the admin cache, to take into account new admins/admin permissions.
-- /ban: bans a user
-- /unban: unbans a user
-- /mute: mute a user
-- /unmute: unmutes a user
-- /tban [entity] : temporarily bans a user for the time interval.
-- /tmute [entity] : temporarily mutes a user for the time interval.
-- /kick: kicks a user
-- /settitle [entity] [title]: sets a custom title for an admin. If no [title] provided defaults to "Admin"
-- /setgrouptitle [text] set group title
-- /setgrouppic: reply to an image to set as group photo
-- /setdescription: Set group description
-- /setsticker: Set group sticker
-- /unmuteall: Unmute all muted members
-- /unbanall: Unban all banned members
-- /banme: Bans you
-- /kickme: Kicks you
-- /kickthefools: Kick inactive members from group (one week)
-- /users: Get users list of group
-- /lowpromote: Promote a member with low rights
-- /midpromote: Promote a member with mid rights
-- /highpromote: Promote a member with max rights
-- /lowdemote: Demote an admin to low permissions
-- /middemote: Demote an admin to mid permissions
-- /invitelink: Get chat's invitr link
-- /purge: deletes all messages from the message you replied to
-- /del: deletes the message replied to
-- /zombies: counts the number of deleted account in your group
+<b>Available komutları:</b>
+- /promote (kullanıcı) (?admin'in başlığı): Kullanıcıyı yöneticiye yükseltiyor.
+- /demote (kullanıcı): Kullanıcıyı yöneticiden indirger.
+- /adminlist: Sohbetin tüm yöneticilerini gösterir.
+- /admincache: Yeni yöneticiler /yönetici izinlerini dikkate almak için yönetici önbelleğini güncelleyin.
+- /ban: bir kullanıcıyı yasaklar
+- /unban: kullanıcıyı unbans
+- /mute: kullanıcıyı sessize alma
+- /unmute: kullanıcının sesini açmaYönetici modülü ile kullanıcıları tanıtmayı ve indirgemeyi kolaylaştırın!
 
-Example:
-Sometimes, you promote or demote an admin manually, and Daisy doesn't realise it immediately. This is because to avoid spamming telegram servers, admin status is cached locally.
-This means that you sometimes have to wait a few minutes for admin rights to update. If you want to update them immediately, you can use the /admincache command; that'll force Daisy to check who the admins are again.
-
+<b>Available komutları:</b>
+- /promote (kullanıcı) (?admin'in başlığı): Kullanıcıyı yöneticiye yükseltiyor.
+- /demote (kullanıcı): Kullanıcıyı yöneticiden indirger.
+- /adminlist: Sohbetin tüm yöneticilerini gösterir.
+- /admincache: Yeni yöneticiler /yönetici izinlerini dikkate almak için yönetici önbelleğini güncelleyin.
+- /ban: bir kullanıcıyı yasaklar
+- /unban: kullanıcıyı unbans
+- /mute: kullanıcıyı sessize alma
+- /unmute: kullanıcının sesini açma
+- /tban [varlık] : kullanıcıyı zaman aralığı için geçici olarak yasaklar.
+- /tmute [varlık] : zaman aralığı için bir kullanıcıyı geçici olarak sessize alır.
+- /kick: bir kullanıcıyı tekmeler
+- /settitle [varlık] [başlık]: yönetici için özel bir başlık ayarlar. Hiçbir [başlık] sağlanmadıysa varsayılan değer "Yönetici"
+- /setgrouptitle [metin] küme grubu başlığı
+- /setgrouppic: grup fotoğrafı olarak ayarlanan bir görüntüyü yanıtlayın
+- /setdescription: Grup açıklamasını ayarla
+- /setsticker: Grup etiketini ayarla
+- /unmuteall: Sessize alınan tüm üyelerin sesini aç
+- /unbanall: Unban tüm banne- /tban [varlık] : kullanıcıyı zaman aralığı için geçici olarak yasaklar.
+- /tmute [varlık] : zaman aralığı için bir kullanıcıyı geçici olarak sessize alır.
+- /kick: bir kullanıcıyı tekmeler
+- /settitle [varlık] [başlık]: yönetici için özel bir başlık ayarlar. Hiçbir [başlık] sağlanmadıysa varsayılan değer "Yönetici"
+- /setgrouptitle [metin] küme grubu başlığı
+- /setgrouppic: grup fotoğrafı olarak ayarlanan bir görüntüyü yanıtlayın
+- /setdescription: Grup açıklamasını ayarla
+- /setsticker: Grup etiketini ayarla
+- /unmuteall: Sessize alınan tüm üyelerin sesini aç
+- /unbanall: Unban tüm banlananları kaldırır. 
 """
