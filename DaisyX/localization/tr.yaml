@@ -154,16 +154,15 @@ STRINGS:
     cant_get_user: "Kullanıcıyı alamadım! Eğer sakıncası varsa, lütfen mesajına cevap verin ve tekrar deneyin."
     emoji_not_allowed: "Üzgünüm, ama yönetici rollerinde emoji olamaz 😞"
   pm_menu:
-    start_hi_group: 'Selam! Benim adım AllMight'
-    start_hi: "Selam! Adım AllMight, grubunuzu verimli bir şekilde yönetmenize yardım ediyorum!"
-    btn_source: "📦 Code source"
+    start_hi_group: 'Selam! Benim adım WylineDev'
+    start_hi: "Selam! Adım WylineDev , grubunuzu verimli bir şekilde yönetmenize yardım ediyorum!"
     btn_help: "❔ Yardım"
     btn_lang: "🇹🇷 Dil"
-    btn_group: "👥 Daisy Grubu"
-    btn_channel: "📡 Daisy Kanalı"
+    btn_chat: "👥 WylineDev Grubu"
+    btn_channel: "📡 WylineDev Kanalı"
     back: Geri
     #/help
-    help_header: Hey! check help here
+    help_header: Hey! Yardım için wiki sayfamıza göz atın
     click_btn: Buraya tıklayın
   disable:
     #/disableable
@@ -382,7 +381,7 @@ STRINGS:
     select_pm_lang: "<b>Yeni dilinizi seçin:</b>"
     select_chat_lang: "<b>Yeni sohbet dili seçin:</b>"
     crowdin_btn: "🌎 Çeviri konusunda bize yardımcı olun"
-    help_us_translate: "<a href=\"https://crowdin.com/project/AllMightbot\">🌎 Dilleri geliştirmemize yardımcı olun</a>"
+    help_us_translate: "<a href=\"">🌎 Dilleri geliştirmemize yardımcı olun</a>"
     not_supported_lang: Bu dil desteklenmiyor!
     lang_changed: Dil <b>{lang_name}</b> olarak değiştirildi.
     see_translators: '👥 Çevirenleri gör'
@@ -421,7 +420,6 @@ STRINGS:
     father: "\nİşte benim yaratıcım."
     sudo_crown: "Hey! Bak, o kullanıcının bir tacı var, bir bakayım... Vay, bir gravür var - <b>'sudo kullanıcısı'</b>!"
   stickers:
-    dev: "\nHey! Look, that user has a crown, let me see it... Wow, it has an engraving - <b>'dev user'</b>!"
     rpl_to_sticker: "Bir çıkartmaya yanıt verin!"
     ur_sticker: |
       <b>Emoji:</b> <code>{emoji}</code>
@@ -438,8 +436,6 @@ STRINGS:
     info_first: "\nİsim: {first_name}"
     info_last: "\nSoyisim: {last_name}"
     info_username: "Kullanıcı adı: {username}"
-    info_sw_ban: "\nThis user is banned in @SpamWatch!"
-    info_sw_ban_reason: "\nReason: <code>{sw_reason}</code>"
     info_link: "\nKullanıcı bağlantısı: {user_link}"
     info_saw: "Onu yaklaşık olarak <code>{num}</code> adet grupta gördüm"
     info_fbanned: "\nBulunan örgütte yasaklı: "
@@ -458,31 +454,31 @@ STRINGS:
     big_file: Yalnızca 50 MB'ın altındaki dosyaları içe aktarma desteklenir!
     started_importing: İçe aktarma başladı! Lütfen bekle...
     bad_file: Bozuk dosya! Beklenen <code>'genel'</code> sütunu.
-    file_version_so_new: Dışa aktarılan dosya sürümü AllMight'nin şu anda desteklediğinden daha yeni!
+    file_version_so_new: Dışa aktarılan dosya sürümü Wyline'nin şu anda desteklediğinden daha yeni!
     imports_locked: Lütfen içe aktarmayı tekrar kullanabilmek için %s süre zarfında bekleyin!
     import_done: İçe aktarma tamamlandı!
   restrictions:
     user_not_in_chat: Kullanıcı bu sohbette değil!
     #Kicks
-    kick_DaisyX: Beni tekmelemeye çalışmak yerine zamanını daha iyi geçirebilirsin. Bu sadece sıkıcı.
+    kick_AllMight: Beni tekmelemeye çalışmak yerine zamanını daha iyi geçirebilirsin. Bu sadece sıkıcı.
     kick_admin: Yönetici tekmelemek iyi bir düşünce değildir.
     kick_self: Kendini tekmelemek istiyorsan - sadece bu sohbetten ayrıl. Kendi kendini cezalandırma konusundaki bu acınası girişimlere bakmak yerine bir daha seni görmek istemiyorum.
     user_kicked: "{user}, {chat_name} grubunda {admin} tarafından tekmelendi."
     #Mutes
-    mute_DaisyX: Aslında, onun yerine seni susturmaktan mutluluk duyarım.
+    mute: Aslında, onun yerine seni susturmaktan mutluluk duyarım.
     mute_admin: Yönetici susturabileceğinizi düşünüyorsanız, yanılıyorsunuz!
     mute_self: Kendini tekmelemek istiyorsan - sadece bu sohbetten ayrıl. Kendi kendini cezalandırma konusundaki bu acınası girişimlere bakmak yerine bir daha seni görmek istemiyorum.
     user_muted: "{user}, {chat_name} grubunda {admin} tarafından susturuldu."
-    unmute_DaisyX: Aslında, sessiz değilim.
+    unmute: Aslında, sessiz değilim.
     unmute_admin: Haha hayır, önce onu susturmayı dene!
     unmute_self: Önce seni susturmalı mıyım?
     user_unmuted: "{user}, {chat_name} grubunda {admin} tarafından tekrar konuşabilir."
     #Bans
-    ban_DaisyX: Hayır, yapmayacağım! Sohbet sahibinden bunu yapmasını isteyin!
+    ban: Hayır, yapmayacağım! Sohbet sahibinden bunu yapmasını isteyin!
     ban_admin: Haha, önce onu <code>/demote</code> edelim.
     ban_self: Neden kendini yasaklamaya çalışıyorsun?
     user_banned: "{user}, {chat_name} grubunda {admin} tarafından yasaklandı."
-    unban_DaisyX: Aslında, yasaklı değilim.
+    unban: Aslında, yasaklı değilim.
     unban_admin: Haha hayır, önce onu yasaklamayı dene!
     unban_self: Önce seni yasaklamalı mıyım?
     user_unband: "{user}, {chat_name} grubunda {admin} tarafından yasağı kaldırıldı."
@@ -516,16 +512,15 @@ STRINGS:
     #Callback
     user_blocked: "PM'den /start yaz!"
     rules_was_pmed: Kurallar PM'den gönderildi!
-  #cannot_find_note: "I can't find the note <code>{}</code>"
-  #set_note: "Successfully set the rules note to <code>{}</code>"
-  #didnt_set_note: "This group doesn't have rules note set."
-  #cannot_find_set_note: "I can't find the rules note."
-  #havent_set_rules_note: "You haven't set the rules note yet."
-  #success_remove_rules_note: "Successfully removed rules note in <b>{}</b>."
+  #cannot_find_note: "Notu bulamıyorum. <code>{}</code>"
+  #set_note: "Kural notlarını başarıyla <code>{}</code>"
+  #didnt_set_note: "Bu grupta kural notu kümesi yok."
+  #cannot_find_set_note: "Kural notlarını bulamıyorum."
+  #havent_set_rules_note: "Henüz kurallar notlarını belirlemedin.."
+  #success_remove_rules_note: "Kurallar notu başarıyla kaldırıldı <b>{}</b>."
   greetings:
     default_welcome: "Merhaba {mention}! Nasılsın?"
     default_security_note: "Hoşgeldin {mention}! Lütfen kendini insan olarak doğrulamak için aşağıdaki düğmeye basın!"
-    thank_for_add: "Thanks for adding me to your group! Take a look at /help and follow my news channel @DaisyXUpdates."
     bool_invalid_arg: Geçersiz argüman, beklenen <code>on</code>/<code>off</code>.
     #/setwelcome
     saved: Karşılama mesajı <b>%s</b> içinde kaydedildi
@@ -620,11 +615,43 @@ STRINGS:
     no_unlock_args: Kilidi açmam için bana birkaç argüman ver!
     not_locked: Kilidini açacağım bir şey yok.
     unlocked_successfully: '{chat} içinde {lock} kilidi başarıyla açıldı!'
-  afk:
-    is_afk: "{user} is AFK!\nReason: {reason}"
-    unafk: "{user} is not AFK anymore!"
-    afk_anon: "AFK mode cannot be used as an anonymous administrator."    
-    
-
-    
-
+RANDOM_STRINGS:
+  RUNS:
+    - "Hayırrrrrrrrrr!.."
+    - "Ağlaycam"
+    - "Efendim, neden?"
+    - "Neden bunu yapıyorsun? Ağlıyorum."
+    - "Birisi gerçekten bu dizeleri benim için yazdı ;_;"
+    - "Alexa, play Despacito!"
+    - "Yapılacaklar: BU DİZEYİ YAZ."
+    - "Lütfen efendim :("
+    - "Bekle, ah, dur... sticker atamıyorum ;_;"
+    - "/runs"
+    - "Miyav! 😺"
+    - "/cat komutunu dene"
+    - "Tek dostum Rose"
+    - "Tek dostum Yana"
+    - "Sana yeni şakalar göndereceğimi düşünüyorsan - yanılıyorsun, yapmayacağım!"
+    - "NaytSeYd 1 NuMaRA"
+    - "OwO"
+    - "?_?"
+    - "Herhangi bir yarış var mı?"
+    - "Erişim reddedildi!!"
+    - "Tamam kaçıyorsun ve ne kadar süre yapabileceğini görüyorum.."
+    - "Bu çok epik"
+    - "Bu daha da epik!!"
+    - "Ben çok fakirim... :("
+    - "Selamlar"
+    - "Sen bir sihirb- Oh. Bekle. Sen Harry değilsin, devam et."
+    - "Sevimlisin"
+    - ">~<"
+    - "@admins lütfen <code>/disable /runs</code>"
+    - "Spam spam spam spam spam"
+    - "Beyler çeviri için o kadar uğraştık bi like atarsınız artık"
+    - "Belki şans sana güler."
+    - "Bunu yaptığına pişman olacaksın..."
+    - Ben makineyim
+    - Asla uyumam
+    - Gözlerimi açık tutuyorum
+    - Ben robotum
+    - Keşke bir şeyler hissedebilseydim
